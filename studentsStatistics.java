@@ -6,11 +6,16 @@ public class studentsStatistics {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int howManystudents;
+
 
         System.out.print("How many students are in class: ");
-        howManystudents = scanner.nextInt();
-        int[] studentsScore = {howManystudents};
+        int howManystudents = scanner.nextInt();
+        int[] studentsScore = new int[howManystudents];
+
+        for (int studentCounter = 0; studentCounter < howManystudents; studentCounter++) {
+            System.out.print("Student number " + (studentCounter + 1) + " score: ");
+            studentsScore[studentCounter] = scanner.nextInt();
+        }
 
         
     }
