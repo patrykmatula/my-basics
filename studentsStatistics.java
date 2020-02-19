@@ -15,12 +15,26 @@ public class studentsStatistics {
 
 
         for (int studentCounter = 0; studentCounter < howManystudents; studentCounter++) {
+
             System.out.print("Student number " + (studentCounter + 1) + " score in 1-6: ");
             studentsScore[studentCounter] = scanner.nextInt();
+
+            if (studentsScore[studentCounter] < 1 || studentsScore[studentCounter] > 6) {
+                System.out.print("Student number " + (studentCounter + 1) + " score in 1-6: ");
+                studentsScore[studentCounter] = scanner.nextInt();
+            }
+
             System.out.print("Student number " + (studentCounter + 1) + " score in %: ");
             studentsPercentage[studentCounter] = scanner.nextDouble();
+
+            if ( studentsPercentage[studentCounter] < 0.00 || studentsPercentage[studentCounter] > 100.00) {
+                System.out.print("Student number " + (studentCounter + 1) + " score in %: ");
+                studentsPercentage[studentCounter] = scanner.nextDouble();
+            }
+
+            }
         }
 
         
     }
-}
+
