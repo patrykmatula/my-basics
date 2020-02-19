@@ -1,4 +1,3 @@
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.Scanner;
 
 public class studentsStatistics {
@@ -33,6 +32,15 @@ public class studentsStatistics {
             }
 
             }
+        System.out.println("\nResuls:");
+        int sumScore = 0;
+        double sumPercentage = 0;
+        for (int studentCounter = 0; studentCounter < howManystudents; studentCounter++) {
+            System.out.println("Student " + (studentCounter + 1) + " score is " + studentsScore[studentCounter] + " and percentage is " + studentsPercentage[studentCounter] + ".");
+            sumScore = sumScore + studentsScore[studentCounter];
+            sumPercentage = sumPercentage + studentsPercentage[studentCounter];
+        }
+
         }
 
         
