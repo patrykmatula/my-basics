@@ -6,12 +6,10 @@ public class studentsStatistics {
 
         Scanner scanner = new Scanner(System.in);
 
-
         System.out.print("How many students are in class: ");
         int howManystudents = scanner.nextInt();
         int[] studentsScore = new int[howManystudents];
         double[] studentsPercentage = new double[howManystudents];
-
 
         for (int studentCounter = 0; studentCounter < howManystudents; studentCounter++) {
 
@@ -30,8 +28,7 @@ public class studentsStatistics {
                 System.out.print("Student number " + (studentCounter + 1) + " score in %: ");
                 studentsPercentage[studentCounter] = scanner.nextDouble();
             }
-
-            }
+        }
         System.out.println("\nResuls:");
         int sumScore = 0;
         double sumPercentage = 0;
@@ -40,9 +37,8 @@ public class studentsStatistics {
             sumScore = sumScore + studentsScore[studentCounter];
             sumPercentage = sumPercentage + studentsPercentage[studentCounter];
         }
-
+        System.out.println("Average score is " + (sumScore / howManystudents) + ".");
+        System.out.println("Average score in % is " + (sumPercentage / howManystudents) + ".");
         }
-
-        
     }
 
